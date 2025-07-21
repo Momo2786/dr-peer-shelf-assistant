@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr Peer AI Shelf Assistant Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f8f9fa; }
+        h1 { color: #007BFF; }
+        #response { margin-top: 30px; font-size: 20px; color: green; }
+        input[type="file"] { margin: 20px; }
+        .footer { margin-top: 50px; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>🧠 Dr Peer AI Shelf Assistant</h1>
+    <p>Upload a photo of your shelf to simulate real-time stock detection.</p>
+    <input type="file" accept="image/*" onchange="simulateAI()" />
+    <div id="response"></div>
+    <div class="footer">Simulation only – No actual AI analysis performed</div>
+    <script>
+        function simulateAI() {
+            const response = document.getElementById('response');
+            response.innerHTML = "🔍 Analyzing image...<br><br>⚠️ ALERT: Milk is out of stock in Aisle 2.<br>✅ Action: Restock immediately.";
+        }
+    </script>
+</body>
+</html>
